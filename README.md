@@ -3,10 +3,10 @@ This project provides a Holodeck B2B _delivery method_ that will only write the 
 Because there is no ebMS meta-data written to file there is also no possibility to indicate the possible relation between multiple payloads in a _User Message_ and it is the business application's responsibility to determine the possible relations solely based on the contents of the payloads.
 
 __________________
-For more information on using Holodeck B2B visit the website at http://holodeck-b2b.org
-Lead developer: Sander Fieten
-Code hosted at https://github.com/holodeck-b2b/payloadonly-delivery
-Issue tracker https://github.com/holodeck-b2b/payloadonly-delivery/issues
+For more information on using Holodeck B2B visit the website at http://holodeck-b2b.org  
+Lead developer: Sander Fieten  
+Code hosted at https://github.com/holodeck-b2b/payloadonly-delivery  
+Issue tracker https://github.com/holodeck-b2b/payloadonly-delivery/issues 
 
 ## Installation
 ### Prerequisites
