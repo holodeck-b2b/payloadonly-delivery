@@ -26,12 +26,12 @@ import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.holodeckb2b.common.messagemodel.util.MessageUnitUtils;
+import org.holodeckb2b.common.util.MessageUnitUtils;
 import org.holodeckb2b.common.util.Utils;
 import org.holodeckb2b.interfaces.delivery.IMessageDeliverer;
 import org.holodeckb2b.interfaces.delivery.IMessageDelivererFactory;
 import org.holodeckb2b.interfaces.delivery.MessageDeliveryException;
-import org.holodeckb2b.interfaces.events.IMessageDeliveryEvent;
+import org.holodeckb2b.interfaces.events.IMessageDelivered;
 import org.holodeckb2b.interfaces.messagemodel.IMessageUnit;
 import org.holodeckb2b.interfaces.messagemodel.IPayload;
 import org.holodeckb2b.interfaces.messagemodel.IUserMessage;
@@ -49,7 +49,7 @@ import org.holodeckb2b.interfaces.messagemodel.IUserMessage;
  * <p>NOTE 1: The back-end application should acquire a write lock on the files before processing them as Holodeck B2B
  * may still be writing data to them. 
  * <p>NOTE 2: As payloads are delivered individually the deliverer cannot ensure that the total delivery is atomic. 
- * The {@link IMessageDeliveryEvent} may be used to get notifications about the completeness of the delivery.
+ * The {@link IMessageDelivered} may be used to get notifications about the completeness of the delivery.
  * <p>NOTE 2: This delivery method can only be used for delivery of <i>User Message</i>. If used in a P-Mode that also
  * needs to notify signals (Receipts or Errors) to the back-end specific delivery methods should be specified!    
  * 
@@ -154,7 +154,7 @@ public class PayloadOnly implements IMessageDelivererFactory {
 	        final String extension = Utils.getExtension(mimeType);	        
 	        Path targetPath = null;	        
 	        try {
-	        	 	targetPath = Utils.createFileWithUniqueName(directory 
+	        	targetPath = Utils.createFileWithUniqueName(directory 
 	        	 									+ (senderId + "-" + messageId).replaceAll("[^a-zA-Z0-9.]", "_") 
 	        	 									+ extension);
 	            Files.copy(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING);	            
