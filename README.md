@@ -2,6 +2,7 @@
 This project provides a Holodeck B2B _delivery method_ that will only write the payloads of a _User Message_ to file. This can be useful when the business documents contain all relevant meta-data that the back-end application needs for processing the document.
 Because there is no ebMS meta-data written to file there is also no possibility to indicate the possible relation between multiple payloads in a _User Message_ and it is the business application's responsibility to determine the possible relations solely based on the contents of the payloads.
 
+**NOTE: This repository is not actively maintained any more!** 
 __________________
 For more information on using Holodeck B2B visit the website at http://holodeck-b2b.org  
 Lead developer: Sander Fieten  
@@ -24,20 +25,8 @@ There is one **required** parameter _deliveryDirectory_ which indicates the path
 * It is *recommended* to use the _duplicate elimination_ function of the _AS4 Reception Awareness_ feature.
 
 ## Contributing
-We are using the simplified Github workflow to accept modifications which means you should:
-* create an issue related to the problem you want to fix or the function you want to add (good for traceability and cross-reference)
-* fork the repository
-* create a branch (optionally with the reference to the issue in the name)
-* write your code
-* commit incrementally with readable and detailed commit messages
-* run integration tests to check everything works on runtime
-* submit a pull-request against the master branch of this repository
-
-If your contribution is more than a patch, please contact us beforehand to discuss which branch you can best submit the pull request to.
-
-### Submitting bugs
-You can report issues directly on the [project Issue Tracker](https://github.com/holodeck-b2b/payloadonly-delivery/issues).
-Please document the steps to reproduce your problem in as much detail as you can (if needed and possible include screenshots).
+Due to limited interest this extension is not actively maintained any more and only works on Holodeck B2B version 5.x. 
+If you require this extension to be updated to work with newer Holodeck B2B, please contact us about sponsorship of this development work.
 
 ## Versioning
 Version numbering follows the [Semantic versioning](http://semver.org/) approach.
