@@ -10,7 +10,7 @@ Issue tracker https://github.com/holodeck-b2b/payloadonly-delivery/issues
 
 ## Installation
 ### Prerequisites
-This delivery method can be used in Holodeck B2B version 3.0.0 or later. It runs on JRE version 7.
+This delivery method can be used in Holodeck B2B version 5.x.
 
 ### Using the delivery method
 Like any delivery method this one is configured in the P-Mode. As it to be used for the delivery of _User Messages_ it should be configured as the _default_ delivery method in, i.e. in element `//Leg/DefaultDelivery`. The class name of the to set in `DeliveryMethod` is `org.holodeckb2b.deliverymethod.file.PayloadOnly`.

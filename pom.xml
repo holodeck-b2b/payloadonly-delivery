@@ -21,7 +21,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.holodeckb2b.extensions</groupId>
 	<artifactId>payloadonly-delivery</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	<name>HB2B Payload Only Delivery Method</name>
 	<description>This project implements a simple Holodeck B2B extension that contains a delivery method for
@@ -66,34 +66,23 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.holodeckb2b</groupId>
-			<artifactId>holodeckb2b-interfaces</artifactId>
-			<version>4.0.0-SNAPSHOT-10</version>
+			<artifactId>holodeckb2b-core</artifactId>
+			<version>5.0.0</version>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.holodeckb2b</groupId>
-			<artifactId>holodeckb2b-common</artifactId>
-			<version>4.0.0-SNAPSHOT-10</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>2.6.2</version>
 		</dependency>
 
-    <!-- Dependencies for testing -->
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <scope>test</scope>
-        <version>4.9</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-core</artifactId>
-        <scope>test</scope>
-        <version>2.6.2</version>
-    </dependency>
+	    <!-- Dependencies for testing -->
+	    <dependency>
+	        <groupId>junit</groupId>
+	        <artifactId>junit</artifactId>
+	        <scope>test</scope>
+	        <version>4.9</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.apache.logging.log4j</groupId>
+	        <artifactId>log4j-core</artifactId>
+	        <scope>test</scope>
+	        <version>2.6.2</version>
+	    </dependency>
 	</dependencies>
 </project>
